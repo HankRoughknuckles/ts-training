@@ -30,13 +30,13 @@ export class NumberStack {
    * Sets up a new NumberStack object.  Is called whenever `new NumberStack()`
    * is called.
    */
-  constructor() {
-    this.list = [];
+  constructor(input: number[] = []) {
+    this.list = input;
   }
 
   /** Puts a number on the top of the stack */
   public push(input: number): void {
-    return;
+    this.list.push(input);
   }
 
   /** Remove the most recently pushed number from the stack and return it */
@@ -54,6 +54,6 @@ export class NumberStack {
 
   /** Returns all the contents of the stack */
   get contents(): number[] {
-    return [];
+    return this.list;
   }
 }
